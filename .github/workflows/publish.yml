@@ -26,5 +26,5 @@ jobs:
           MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
         run: |
-          mvn --batch-mode org.codehaus.mojo:versions-maven-plugin:2.18.0:set -DnewVersion="${GITHUB_REF_NAME#v}" -DgenerateBackupPoms=false
+          mvn --batch-mode org.codehaus.mojo:versions-maven-plugin:2.22.0:set -DnewVersion="${GITHUB_REF_NAME#v}" -DgenerateBackupPoms=false
           mvn --batch-mode deploy -Pcentral
